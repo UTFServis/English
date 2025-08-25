@@ -1,104 +1,222 @@
 <!DOCTYPE HTML>
 <html lang="fa">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آموزشگاه زبان پیشروان دانش</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="main.css" />
-    <noscript><link rel="stylesheet" href="noscript.css" /></noscript>
+    <!-- CSS ها در همان مسیر index.html -->
+    <link rel="stylesheet" href="main.css">
+    <noscript><link rel="stylesheet" href="noscript.css"></noscript>
     <style>
-      body {
-        font-family: tahoma, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f9f9f9;
-        color: #333;
-      }
-      header {
-        background: #4CAF50;
-        color: white;
-        padding: 15px;
-        text-align: center;
-      }
-      nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        background: #333;
-      }
-      nav ul li {
-        margin: 0;
-      }
-      nav ul li a {
-        display: block;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: white;
-      }
-      nav ul li a:hover {
-        background: #575757;
-      }
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-      footer {
-        text-align: center;
-        padding: 15px;
-        background: #333;
-        color: white;
-      }
-
-      /* --- Responsive --- */
-      @media (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-          align-items: center;
+        /* افکت ورود نرم */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
-        nav ul li a {
-          padding: 12px;
-          width: 100%;
-          text-align: center;
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .container {
-          padding: 10px;
-        }
-        header {
-          font-size: 18px;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>آموزشگاه زبان پیشروان دانش</h1>
+</head>
+<body class="is-preload landing">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1 id="logo">
+            <a href="index.html">
+                <img src="pd.png" alt="پیشروان دانش" style="height:50px;" class="fade-in-up">
+            </a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">خانه</a></li>
+                <li>
+                    <a href="#">کلاس‌ها</a>
+                    <ul>
+                        <li><a href="#">انگلیسی عمومی</a></li>
+                        <li><a href="#">تافل و آیلتس</a></li>
+                        <li><a href="#">کودکان و نوجوانان</a></li>
+                        <li>
+                            <a href="#">بیشتر</a>
+                            <ul>
+                                <li><a href="#">کارگاه‌ها</a></li>
+                                <li><a href="#">کلاس آنلاین</a></li>
+                                <li><a href="#">تخفیف‌ها</a></li>
+                                <li><a href="#">ثبت‌نام گروهی</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#" class="button primary">ثبت‌نام</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#">صفحه اصلی</a></li>
-        <li><a href="#">درباره ما</a></li>
-        <li><a href="#">دوره‌ها</a></li>
-        <li><a href="#">تماس با ما</a></li>
-      </ul>
-    </nav>
+    <!-- Banner -->
+    <section id="banner">
+        <div class="content">
+            <header>
+                <h2>آینده زبان شما با ما شروع می‌شود</h2>
+            <p>با آموزشگاه زبان پیشروان دانش در منطقه 17 تهران، یادگیری زبان انگلیسی آسان و لذت‌بخش است.</p>
+            </header>
+            <span class="image fade-in-up">
+                <img src="pd.png" alt="آموزشگاه زبان پیشروان دانش">
+            </span>
+        </div>
+        <a href="#one" class="goto-next scrolly">بعدی</a>
+    </section>
 
-    <div class="container">
-      <h2>خوش آمدید</h2>
-      <p>اینجا می‌توانید اطلاعات دوره‌های آموزشی ما را مشاهده کنید.</p>
-      <img src="classroom.jpg" alt="کلاس آموزش زبان">
-    </div>
+    <!-- One -->
+    <section id="one" class="spotlight style1 bottom">
+        <span class="image fit main fade-in-up">
+            <img src="english.png" alt="کلاس‌ها">
+        </span>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-12-medium">
+                        <header>
+                            <h2>چرا پیشروان دانش؟</h2>
+                            <p>مدرن‌ترین متدها و اساتید مجرب در محیطی انگیزه‌بخش</p>
+                        </header>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <p>آموزشگاه زبان پیشروان دانش با بهره‌گیری از متدهای نوین آموزشی، کلاس‌های انگلیسی عمومی، تافل، آیلتس و دوره‌های ویژه کودکان و نوجوانان را برگزار می‌کند. تمرکز بر مکالمه، مهارت‌های شنیداری و نوشتاری باعث تسلط سریع و کاربردی دانشجویان بر زبان می‌شود.</p>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <p>Pishrovan Danesh Language Institute in District 17, Tehran, provides modern and engaging English language courses for all ages. With a focus on conversation, listening, and writing skills, students achieve practical mastery of English quickly and effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">بعدی</a>
+    </section>
 
-    <footer>
-      <p>تمامی حقوق محفوظ است © ۱۴۰۴ آموزشگاه زبان پیشروان دانش</p>
+    <!-- Two -->
+    <section id="two" class="spotlight style2 right">
+        <span class="image fit main fade-in-up">
+            <img src="pd.png" alt="فعالیت‌ها" style="width:30px; height:30px;">
+        </span>
+        <div class="content">
+            <header>
+                <h2>فعالیت‌ها و کارگاه‌ها</h2>
+                <p>تجربه‌ای واقعی از یادگیری زبان</p>
+            </header>
+            <p>کارگاه‌ها، آزمون‌های مستمر و فعالیت‌های فرهنگی باعث می‌شوند یادگیری زبان در محیطی پویا و جذاب انجام شود.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">اطلاعات بیشتر</a></li>
+            </ul>
+        </div>
+        <a href="#three" class="goto-next scrolly">بعدی</a>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="spotlight style3 left">
+        <span class="image fit main bottom fade-in-up">
+            <img src="teacher.jpg" alt="اساتید مجرب">
+        </span>
+        <div class="content">
+            <header>
+                <h2>اساتید مجرب</h2>
+                <p>تضمین یادگیری سریع و موثر</p>
+            </header>
+            <p>اساتید پیشروان دانش با تجربه و مهارت بالا، محیطی دوستانه و حمایت‌کننده ایجاد می‌کنند که باعث پیشرفت سریع و لذت‌بخش زبان‌آموزان می‌شود.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">اطلاعات بیشتر</a></li>
+            </ul>
+        </div>
+        <a href="#four" class="goto-next scrolly">بعدی</a>
+    </section>
+
+    <!-- Four -->
+    <section id="four" class="wrapper style1 special fade-up">
+        <div class="container">
+            <header class="major">
+                <h2>خدمات و امکانات</h2>
+                <p>کلاس‌های متنوع، محیط دوستانه و فعالیت‌های جانبی متناسب با اهداف دانشجویان</p>
+            </header>
+            <div class="box alt">
+                <div class="row gtr-uniform">
+                    <section class="col-4 col-6-medium col-12-xsmall fade-in-up">
+                        <span class="icon solid alt major fa-comments"></span>
+                        <h3>کلاس‌های مکالمه</h3>
+                        <p>تمرکز بر تقویت مهارت گفتاری و شنیداری</p>
+                    </section>
+                    <section class="col-4 col-6-medium col-12-xsmall fade-in-up">
+                        <span class="icon solid alt major fa-book"></span>
+                        <h3>دوره‌های تخصصی</h3>
+                        <p>تافل، آیلتس و دوره‌های ویژه کودکان</p>
+                    </section>
+                    <section class="col-4 col-6-medium col-12-xsmall fade-in-up">
+                        <span class="icon solid alt major fa-users"></span>
+                        <h3>اساتید مجرب</h3>
+                        <p>تضمین یادگیری سریع و موثر</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Five -->
+    <section id="five" class="wrapper style2 special fade">
+        <div class="container">
+            <header>
+                <h2>عضویت در خبرنامه</h2>
+                <p>با خبرنامه ما از آخرین دوره‌ها و تخفیف‌ها مطلع شوید</p>
+            </header>
+            <form method="post" action="#" class="cta">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="ایمیل شما"></div>
+                    <div class="col-4 col-12-xsmall"><input type="submit" value="عضویت" class="fit primary"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; پیشروان دانش. تمامی حقوق محفوظ است.</li>
+        </ul>
     </footer>
-  </body>
+
+</div>
+
+<!-- Scripts (همه در همان مسیر index.html) -->
+<script src="jquery.min.js"></script>
+<script src="jquery.scrolly.min.js"></script>
+<script src="jquery.dropotron.min.js"></script>
+<script src="jquery.scrollex.min.js"></script>
+<script src="browser.min.js"></script>
+<script src="breakpoints.min.js"></script>
+<script src="util.js"></script>
+<script src="main.js"></script>
+
+<script>
+    // نمایش نرم تصاویر هنگام اسکرول
+    function fadeInOnScroll() {
+        const elements = document.querySelectorAll('.fade-in-up');
+        const windowBottom = window.innerHeight + window.scrollY;
+        elements.forEach(el => {
+            if(el.getBoundingClientRect().top + window.scrollY < windowBottom - 50) {
+                el.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+</script>
+
+</body>
 </html>
