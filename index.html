@@ -54,7 +54,8 @@
                     </ul>
                 </li>
                 <li><a href="#">درباره ما</a></li>
-                <li><a href="#" class="button primary">ثبت‌نام</a></li>
+                <!-- دکمه ثبت نام -->
+                <li><a href="https://zabansarapd.ir/home/branch/1" target="_blank" class="button primary">ثبت‌نام</a></li>
             </ul>
         </nav>
     </header>
@@ -220,7 +221,10 @@
     window.addEventListener('scroll', fadeInOnScroll);
     window.addEventListener('load', fadeInOnScroll);
 
-    // جلوگیری از شروع صفحه از پایین
+    // جلوگیری از بازگشت به پایین صفحه بعد از رفرش
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
     window.addEventListener('load', function() {
         window.scrollTo(0, 0);
     });
