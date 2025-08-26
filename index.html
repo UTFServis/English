@@ -135,6 +135,112 @@
         </div>
         <a href="#four" class="goto-next scrolly">بعدی</a>
     </section>
+<!---->
+    <!-- Four -->
+<section id="four" class="wrapper style1 special fade-up">
+    <div class="container">
+        <header class="major">
+            <h2>خدمات و امکانات آموزشگاه</h2>
+            <p>کلاس‌های متنوع، محیط دوستانه و فعالیت‌های جانبی متناسب با اهداف دانشجویان</p>
+        </header>
+        <div class="features">
+            <div class="feature-card">
+                <span class="icon solid major fa-comments"></span>
+                <h3>کلاس‌های مکالمه</h3>
+                <p>تمرکز بر تقویت مهارت گفتاری و شنیداری</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon solid major fa-book"></span>
+                <h3>دوره‌های تخصصی</h3>
+                <p>تافل، آیلتس و دوره‌های ویژه کودکان</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon solid major fa-chalkboard-teacher"></span>
+                <h3>اساتید مجرب</h3>
+                <p>تضمین یادگیری سریع و موثر</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* کارت‌ها */
+    .features {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1rem;
+        flex-wrap: nowrap; /* افقی بمونن */
+        overflow-x: auto; /* اسکرول افقی در موبایل */
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .feature-card {
+        flex: 0 0 auto;
+        min-width: 250px;
+        background: #fff;
+        border-radius: 1.2rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        scroll-snap-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeUp 1s forwards;
+    }
+
+    .feature-card:nth-child(1) { animation-delay: 0.2s; }
+    .feature-card:nth-child(2) { animation-delay: 0.4s; }
+    .feature-card:nth-child(3) { animation-delay: 0.6s; }
+
+    .feature-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature-card .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #ff6b6b;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* دسکتاپ */
+    @media (min-width: 768px) {
+        .features {
+            flex-wrap: wrap; /* در دسکتاپ چند ستون */
+            overflow-x: hidden;
+        }
+        .feature-card {
+            flex: 1 1 calc(33.333% - 1rem);
+            min-width: unset;
+        }
+    }
+</style>
+
+<script>
+    // اجرای انیمیشن کارت‌ها هنگام اسکرول
+    function revealFeatureCards() {
+        const cards = document.querySelectorAll('.feature-card');
+        const windowBottom = window.innerHeight + window.scrollY;
+        cards.forEach(card => {
+            if(card.getBoundingClientRect().top + window.scrollY < windowBottom - 50) {
+                card.style.opacity = 1;
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    window.addEventListener('scroll', revealFeatureCards);
+    window.addEventListener('load', revealFeatureCards);
+</script>
 
     <!-- Four -->
     <section id="four" class="wrapper style1 special fade-up">
@@ -232,3 +338,4 @@
 
 </body>
 </html>
+
