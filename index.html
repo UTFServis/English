@@ -6,6 +6,10 @@
     <title>آموزشگاه زبان پیشروان دانش</title>
     <link rel="stylesheet" href="main.css">
     <noscript><link rel="stylesheet" href="noscript.css"></noscript>
+
+    <!-- اضافه کردن Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         /* افکت ورود نرم */
         .fade-in-up {
@@ -215,11 +219,12 @@
     }
     window.addEventListener('scroll', fadeInOnScroll);
     window.addEventListener('load', fadeInOnScroll);
+
+    // جلوگیری از شروع صفحه از پایین
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
 </script>
 
 </body>
 </html>
-
-
-
-
